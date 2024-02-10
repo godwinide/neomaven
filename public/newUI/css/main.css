@@ -1,0 +1,420 @@
+@font-face {
+    font-family: 'san-francisco';
+    /* This is the name you'll use later */
+    src: url('../fonts/SFUIText/SFUIText-Regular.otf') format('woff');
+    /* Add more src lines for different font formats if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: san-francisco;
+}
+
+body {
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+main {
+    padding-top: 3em;
+    height: 95vh;
+    width: 100%;
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+}
+
+main .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 4em;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+main .content div {
+    width: 50%;
+}
+
+main h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    color: #ffffff;
+}
+
+main p {
+    font-size: 1.4em;
+    color: #fff;
+}
+
+main img {
+    width: 50%;
+    background-attachment: fixed;
+}
+
+.action-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.action-btns a {
+    padding: 1em 2em;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.action-btns .signup {
+    background-color: #eea63a;
+    color: #000;
+    margin-right: 2em;
+
+}
+
+.action-btns .signin {
+    border: 1px solid #eea63a;
+}
+
+section {
+    background-color: #000;
+    padding: 5em 0;
+    position: relative;
+    width: 100%;
+}
+
+section .features {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.features div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.features img {
+    width: 100px;
+    margin-bottom: .5em;
+}
+
+.features p,
+.features h3 {
+    color: #fff;
+    margin: .2em 0;
+}
+
+
+.features h3 {
+    font-size: 1.6em;
+}
+
+#particles,
+#particles2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /* To place it behind other content */
+}
+
+.features .content {
+    position: relative;
+    z-index: 1;
+    /* To place it in front of the particles */
+    /* Additional styling for your content */
+}
+
+section .why {
+    position: relative;
+    z-index: 2;
+    margin-top: 4em;
+    padding: 0 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.why .text {
+    width: 48%;
+    padding: 1em 2em;
+    background-color: rgba(255, 255, 255, 0.037);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.why h2 {
+    color: #fff;
+    display: inline-flex;
+    padding-bottom: .5em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.why p {
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    font-weight: lighter;
+    padding: 1em 0;
+}
+
+.why iframe {
+    width: 50%;
+}
+
+.our-features {
+    margin-top: 4em;
+    padding: 0 .4em;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.our-features h2 {
+    color: #fff;
+    display: inline-block;
+    padding-bottom: .5em;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.offerings {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.offerings .item {
+    width: 30%;
+    min-height: 300px;
+    margin-bottom: 2em;
+    text-align: center;
+    padding: 1em 2em;
+    background-color: rgba(255, 255, 255, 0.037);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.offerings .item img {
+    width: 100px;
+}
+
+.offerings .item p,
+.offerings .item h3 {
+    color: #fff;
+}
+
+.offerings h3 {
+    font-size: 1.5em;
+    margin: .7em 0;
+}
+
+.plans {
+    margin-top: 4em;
+    padding: 0 .4em;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.plans h2.title {
+    color: #fff;
+    display: inline-block;
+    padding-bottom: .5em;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.plans .plan-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.plan-items .item {
+    color: #fff;
+    width: 30%;
+    min-height: 200px;
+    margin-bottom: 2em;
+    text-align: center;
+    padding: 1em 2em;
+    background-color: rgba(255, 255, 255, 0.037);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.plan-items h3 {
+    font: 1.7em;
+    color: #4AABF4;
+}
+
+.plan-items .item h2 {
+    font-size: 2.5em;
+    margin: .5em 0em;
+    display: inline-block;
+}
+
+.plan-items .item img {
+    width: 15px;
+}
+
+.plan-items ul {
+    list-style: none;
+    margin: 1em 0;
+    text-align: left;
+}
+
+.plan-items ul li {
+    margin-bottom: .5em;
+}
+
+.plan-items .item img.coin {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 70px;
+}
+
+.plan-items .item a {
+    width: 80%;
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #4AABF4;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1em 2em;
+}
+
+.parallax-container {
+    background-image: url('/img/maximalfocus-VT4rx775FT4-unsplash\ \(1\).jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.referral {
+    color: #fff;
+}
+
+.referral h2 {
+    color: #fff;
+    display: inline-block;
+    padding-bottom: .5em;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.referral .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.referral .content div {
+    width: 50%;
+    padding: 1em 2em;
+    background-color: rgba(255, 255, 255, 0.037);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 3;
+}
+
+.referral .content img {
+    width: 400px;
+    position: relative;
+    z-index: 3;
+}
+
+.referral p {
+    margin-bottom: 1em;
+}
+
+.registered {
+    display: flex;
+    flex-direction: column !important;
+    color: #fff;
+}
+
+.registered img {
+    width: 90px !important;
+    margin: 0 auto;
+}
+
+.registered .content {
+    max-width: 500px;
+    padding: 1em;
+}
+
+.rtitle {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+footer {
+    color: #fff;
+    margin-top: 2em;
+}
+
+footer .bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 200px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 40%;
+    padding: 2em;
+}

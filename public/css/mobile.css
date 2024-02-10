@@ -1,0 +1,115 @@
+@media screen and (max-width: 1024px) {
+    main {
+        height: 50vh;
+    }
+
+    main .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    main .content div {
+        width: 100%;
+        margin-top: 2em;
+        position: relative;
+        z-index: 3;
+        padding: 2em 1em;
+    }
+
+    main .content h1 {
+        font-size: 2em;
+        font-weight: normal;
+    }
+
+    main .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0000006f;
+    }
+
+    main img {
+        position: absolute;
+        top: 10vh;
+        width: 100%;
+    }
+
+    .features img {
+        width: 70px;
+        margin-bottom: .5em;
+    }
+
+    .features .acc {
+        width: 50px !important;
+    }
+
+    .features div {
+        width: 50%;
+        margin-bottom: 2em;
+    }
+
+    .features h3 {
+        font-size: 1.2em;
+    }
+
+    .features p {
+        font: 1.1em;
+    }
+
+    .features div {
+        text-align: center;
+    }
+
+    .why {
+        flex-direction: column;
+        padding: 0 !important;
+    }
+
+    .why .text {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .why h2 {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: normal;
+    }
+
+    .why p {
+        line-height: 1.4em;
+    }
+
+    .why iframe {
+        width: 100%;
+    }
+
+    .referral .content {
+        flex-direction: column-reverse;
+    }
+
+    .referral .content div {
+        width: 100%;
+    }
+
+    footer {
+        width: 100vw;
+    }
+
+    .offerings .item {
+        width: 100%;
+    }
+
+    .offerings h3 {
+        font-size: 1.2em;
+    }
+
+    .plan-items .item {
+        width: 100%;
+    }
+}

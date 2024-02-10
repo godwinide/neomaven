@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brollix</title>
+    <link rel="stylesheet" href="/newUI/css/main.css" />
+    <link rel="stylesheet" href="/newUI/css/mobile.css" />
+    <link rel="stylesheet" href="/newUI/css/nav.css" />
+    <!-- Add the AOS CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <style>
+      .mgm {
+        border-radius: 7px;
+        position: fixed;
+        z-index: 90;
+        bottom: 20px;
+        left: 10px;
+        background: #fff;
+        padding: 10px 27px;
+        box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.3);
+      }
+      .mgm a {
+        font-weight: 700;
+        display: block;
+        color: #f2d516;
+      }
+      .mgm a,
+      .mgm a:active {
+        transition: all 0.2s ease;
+        color: #f2d516;
+      }
+
+      .mgm b {
+        color: #000 !important;
+        font-weight: bold;
+      }
+
+      .mgm strong {
+        color: #000 !important;
+        font-weight: bold;
+      }
+    </style>
+    <style>
+      .trn {
+        position: fixed;
+        left: 10px;
+        bottom: 80px;
+        z-index: 10000;
+      }
+      #google_translate_element select,
+      #google_translate_element select option {
+        color: #000 !important;
+        background-color: #fff;
+      }
+      #google_translate_element select {
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+      var _smartsupp = _smartsupp || {};
+      _smartsupp.key = "983c3c6e2927245106dcb5fa4561460856b8fb3d";
+      window.smartsupp ||
+        (function (d) {
+          var s,
+            c,
+            o = (smartsupp = function () {
+              o._.push(arguments);
+            });
+          o._ = [];
+          s = d.getElementsByTagName("script")[0];
+          c = d.createElement("script");
+          c.type = "text/javascript";
+          c.charset = "utf-8";
+          c.async = true;
+          c.src = "https://www.smartsuppchat.com/loader.js?";
+          s.parentNode.insertBefore(c, s);
+        })(document);
+    </script>
+
+    <div class="trn">
+      <div
+        style="z-index: 1000; position: relative"
+        id="google_translate_element"
+      ></div>
+    </div>
+    <nav>
+      <div class="logo">
+        <img src="/newUI/img/logo.png" alt="Logo Image" />
+      </div>
+      <div id="hamburger" class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/investment">Investment</a></li>
+        <li><a href="/partners">Partners</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li>
+          <a href="/signin">
+            <button class="login-button">Login</button>
+          </a>
+        </li>
+        <li>
+          <a href="/signup">
+            <button class="join-button">Signup</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="content">
+        <div>
+          <h1><span id="typeit-output"></span></h1>
+          <p>
+            <span id="typeit-output2"></span>
+          </p>
+          <div class="action-btns">
+            <a href="/signup" class="signup">Register</a>
+            <a href="/signin" class="signin">Login</a>
+          </div>
+        </div>
+        <img src="/newUI/img/bull2.png" alt="" />
+      </div>
+      <div class="overlay"></div>
+    </main>
+
+    <div style="background-color: #000" class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async
+      >
+        {
+            "symbols": [
+                {
+                    "proName": "FOREXCOM:SPXUSD",
+                    "title": "S&P 500"
+                },
+                {
+                    "proName": "FOREXCOM:NSXUSD",
+                    "title": "Nasdaq 100"
+                },
+                {
+                    "proName": "FX_IDC:EURUSD",
+                    "title": "EUR/USD"
+                },
+                {
+                    "proName": "BITSTAMP:BTCUSD",
+                    "title": "BTC/USD"
+                },
+                {
+                    "proName": "BITSTAMP:ETHUSD",
+                    "title": "ETH/USD"
+                }
+            ],
+                "showSymbolLogo": true,
+                    "colorTheme": "dark",
+                        "isTransparent": true,
+                            "displayMode": "regular",
+                                "locale": "en"
+        }
+      </script>
+    </div>
+
+    <section>
+      <div class="features" data-aos="zoom-in">
+        <div>
+          <img src="/newUI/img/icons8-withdrawal-64.png" alt="" />
+          <p>Total Withdrawals</p>
+          <h3>$600M+</h3>
+        </div>
+        <div>
+          <img src="/newUI/img/icons8-investors-64.png" alt="" />
+          <p>Investors</p>
+          <h3>186K+</h3>
+        </div>
+        <div>
+          <img src="/newUI/img/icons8-coins-96.png" alt="" />
+          <p>Total Investments</p>
+          <h3>$1.6B</h3>
+        </div>
+        <div>
+          <img src="/newUI/img/icons8-accounts-64.png" class="acc" alt="" />
+          <p>Total Accounts</p>
+          <h3>500k+</h3>
+        </div>
+      </div>
+
+      <div class="why">
+        <div class="text" data-aos="zoom-in">
+          <h2>What made Brollix our choice?</h2>
+          <p>
+            Brollix, initially a legally registered Private Limited Company, has
+            evolved into an open joint-stock company to democratize access to
+            its range of financial products. This transformation was driven by
+            the investment management expertise of our professionals. Having
+            demonstrated exceptional performance and substantial asset growth,
+            we now offer our investment products through dedicated online
+            services. Brollix operates independently, free from affiliations
+            with other organizations, enabling us to make autonomous decisions.
+            Our team of full-time financial experts conducts swift and effective
+            financial analysis. Our mission is to empower individuals to
+            maximize their investment returns with minimal risk.
+          </p>
+          <div class="action-btns">
+            <a href="/about" class="signin">Learn more</a>
+          </div>
+        </div>
+        <iframe
+          data-aos="zoom-in"
+          src="https://widget.coinlib.io/widget?type=full_v2&amp;theme=dark&amp;cnt=6&amp;pref_coin_id=1505&amp;graph=yes"
+          height="409px"
+          scrolling="auto"
+          marginwidth="0"
+          marginheight="0"
+          frameborder="0"
+          border="0"
+          style="border: 0; margin: 0; padding: 0"
+        ></iframe>
+      </div>
+
+      <div class="our-features">
+        <h2 data-aos="fade-right">What We Offer</h2>
+        <p data-aos="fade-left">
+          Accruals in all plans continue for a lifetime.
+        </p>
+
+        <div class="offerings">
+          <div class="item" data-aos="zoom-in">
+            <img src="/newUI/img/united_1534959.png" alt="" />
+            <h3>Team</h3>
+            <p>
+              We are a highly organized team committed to contract fulfillment.
+              You won't find a better option
+            </p>
+          </div>
+          <div class="item" data-aos="zoom-in">
+            <img src="/newUI/img/shield_306047.png" alt="" />
+            <h3>Warranty</h3>
+            <p>
+              The stability of our company and income guarantee that your
+              deposit is safe throughout the entire investment plan.
+            </p>
+          </div>
+          <div class="item" data-aos="zoom-in">
+            <img src="/newUI/img/support_2268705.png" alt="" />
+            <h3>24/7 Support</h3>
+            <p>
+              Our support team is available 24/7. Please feel free to reach out
+              if you have any questions
+            </p>
+          </div>
+          <div class="item" data-aos="zoom-in">
+            <img src="/newUI/img/money-withdrawal_9720667.png" alt="" />
+            <h3>Instant Withdrawal</h3>
+            <p>
+              You have the flexibility to withdraw funds whenever your balance
+              permits it, with a minimum withdrawal amount of just $2
+            </p>
+          </div>
+          <div class="item" data-aos="zoom-in">
+            <img src="/newUI/img/server_461055.png" alt="" />
+            <h3>DEDICATED SERVER</h3>
+            <p>
+              Our site is hosted on a highly secure and stable dedicated server,
+              ensuring uninterrupted operation.
+            </p>
+          </div>
+          <div class="item" data-aos="zoom-in">
+            <img src="/newUI/img/padlock_1058943.png" alt="" />
+            <h3>EV-SSL SAFETY</h3>
+            <p>
+              Your data is protected by an EV-SSL certificate, ensuring
+              confidential transmission
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="plans">
+        <h2 class="title" data-aos="fade-right">
+          Select an appropriate investment strategy
+        </h2>
+        <p data-aos="fade-left">What do we offer to investors?</p>
+
+        <div class="plan-items">
+          <div class="item" data-aos="zoom-in">
+            <h3>Standard</h3>
+            <h2>10%</h2>
+            <h4>After 24hrs</h4>
+            <ul>
+              <li>
+                <img src="/newUI/img/ok_7699208.png" alt="" srcset="" />
+                Deposit Included
+              </li>
+              <li>
+                <img src="/newUI/img/ok_7699208.png" alt="" srcset="" />
+                Minimum $50
+              </li>
+              <li>
+                <img src="/newUI/img/ok_7699208.png" alt="" srcset="" />
+                Maximum $1999.9
+              </li>
+            </ul>
+            <a href="/signup">Get started</a>
+            <img class="coin" src="/newUI/img/icons8-coin-96.png" alt="" />
+          </div>
+          <div class="item" data-aos="zoom-in">
+            <h3>Classic</h3>
+            <h2>30%</h2>
+            <h4>After 24hrs</h4>
+            <ul>
+              <li>
+                <img src="/newUI/img/ok_7699208.png" alt="" srcset="" />
+                Deposit Included
+              </li>
+              <li>
+                <img src="/newUI/img/ok_7699208.png" alt="" srcset="" />
+                Minimum $50
+              </li>
+              <li>
+                <img src="/newUI/img/ok_7699208.png" alt="" srcset="" />
+                Maximum $1999.9
+              </li>
+            </ul>
+            <a href="/signup">Get started</a>
+            <img class="coin" src="/newUI/img/icons8-coin-96.png" alt="" />
+          </div>
+          <div class="item" data-aos="zoom-in">
+            <h3>Premium</h3>
+            <h2>60%</h2>
+            <h4>After 24hrs</h4>
+            <ul>
+              <li>
+                <img src="/newUI/img/ok_7699208.png" alt="" srcset="" />
+                Deposit Included
+              </li>
+              <li>
+                <img src="/newUI/img/ok_7699208.png" alt="" srcset="" />
+                Minimum $50
+              </li>
+              <li>
+                <img src="/newUI/img/ok_7699208.png" alt="" srcset="" />
+                Maximum $1999.9
+              </li>
+            </ul>
+            <a href="/signup">Get started</a>
+            <img class="coin" src="/newUI/img/icons8-coin-96.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div id="particles"></div>
+    </section>
+    <section class="parallax-container">
+      <div id="particles3" style="width: 100%"></div>
+    </section>
+    <section class="referral">
+      <div class="content" data-aos="zoom-in">
+        <div>
+          <h2>Referral Commission</h2>
+          <p>2 level affiliate program</p>
+          <p>
+            At Maverick, we trust that the most effective way to expand our
+            business is through word-of-mouth advertising from our satisfied
+            clients. With this principle in mind, Maverick has introduced an
+            enticing two-level affiliate program as a rewarding opportunity.
+          </p>
+          <p>
+            Maverick is actively investing in the promotion of its investment
+            program, and anyone has the chance to earn rewards. To participate,
+            simply refer your friends, family, and colleagues within your
+            network using your unique referral link. You can earn from our
+            affiliate program and withdraw referral rewards, even if you don't
+            have an active deposit in the project.
+          </p>
+        </div>
+        <img src="/newUI/img/techny-digital-marketing.png" alt="" srcset="" />
+      </div>
+      <div id="particles2"></div>
+    </section>
+
+    <div class="registered" data-aos="fade-right">
+      <div class="content">
+        <div class="rtitle">
+          <h2>UK Registered Company</h2>
+          <img src="/newUI/img/icons8-verified-96.png" alt="" srcset="" />
+        </div>
+        <p>
+          Maverick is a fully registered and licensed company in UK. Maverick is
+          powered by the latest and most secure form of SSL data encryption to
+          keep all your data and information safe and secure.
+        </p>
+      </div>
+    </div>
+
+    <div class="mgm" style="display: none">
+      <div class="txt" style="color: black">
+        Someone from <b>Australia</b> just Won
+        <strong href="javascript:void(0);" onclick="javascript:void(0);">
+          $1000
+        </strong>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/newUI/js/nav.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script>
+      new TypeIt("#typeit-output", {
+        speed: 50,
+        startDelay: 900,
+      })
+        .type("Guaranteeing", { delay: 50, speed: 25 })
+        .type(" 10% daily income stability.", {
+          speed: 80,
+        })
+        .go();
+    </script>
+    <script>
+      new TypeIt("#typeit-output2", {
+        speed: 50,
+      })
+        .type(
+          "Brollix, an innovative firm, specializes in gold investments, ensuring a consistent 10% daily return.",
+          { delay: 1500, speed: 100 }
+        )
+        .go();
+    </script>
+    <!-- Add the AOS JavaScript file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="/newUI/js/cdn.jsdelivr.net_particles.js_2.0.0_particles.min.js"></script>
+    <script>
+      particlesJS("particles", {
+        particles: {
+          number: {
+            value: 70,
+          },
+          color: {
+            value: "#b5b5b5",
+          },
+          shape: {
+            type: "circle",
+          },
+          size: {
+            value: 3,
+          },
+          move: {
+            speed: 1,
+          },
+        },
+      });
+      particlesJS("particles2", {
+        particles: {
+          number: {
+            value: 50,
+          },
+          color: {
+            value: "#b5b5b5",
+          },
+          shape: {
+            type: "circle",
+          },
+          size: {
+            value: 3,
+          },
+          move: {
+            speed: 1,
+          },
+        },
+      });
+      particlesJS("particles3", {
+        particles: {
+          number: {
+            value: 100,
+          },
+          color: {
+            value: "#b5b5b5",
+          },
+          shape: {
+            type: "circle",
+          },
+          size: {
+            value: 3,
+          },
+          move: {
+            speed: 1,
+          },
+        },
+      });
+    </script>
+
+    <script type="text/javascript">
+      var listCountries = [
+        "United Kingdom",
+        "USA",
+        "Germany",
+        "France",
+        "Italy",
+        "USA",
+        "Australia",
+        "Lesotho",
+        "Canada",
+        "Argentina",
+        "Saudi Arabia",
+        "Mexico",
+        "Kenya",
+        "Maldives",
+        "Venezuela",
+        "South Africa",
+        "Sweden",
+        "India",
+        "South Africa",
+        "Italy",
+        "Pakistan",
+        "United Kingdom",
+        "South Africa",
+        "Greece",
+        "Cuba",
+        "South Africa",
+        "Portugal",
+        "Austria",
+        "South Africa",
+        "Panama",
+        "USA",
+        "South Africa",
+        "Netherlands",
+        "Switzerland",
+        "Belgium",
+        "Israel",
+        "Cyprus",
+      ];
+      var listPlans = [
+        "$500",
+        "$1500",
+        "$1000",
+        "$10,000",
+        "$2000",
+        "$3000",
+        "$4000",
+        "$600",
+        "$700",
+        "$2500",
+      ];
+      interval = Math.floor(Math.random() * 5 + 3000);
+      var run = setInterval(request, interval);
+
+      function request() {
+        clearInterval(run);
+        interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+        var country =
+          listCountries[Math.floor(Math.random() * listCountries.length)];
+        var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
+        var msg =
+          "Someone from <b>" +
+          country +
+          '</b> just Withdrew <strong href="javascript:void(0);" onclick="javascript:void(0);">' +
+          plan +
+          " </strong>";
+        $(".mgm .txt").html(msg);
+        $(".mgm").stop(true).fadeIn(2);
+        window.setTimeout(function () {
+          $(".mgm").stop(true).fadeOut(100);
+        }, 8000);
+        run = setInterval(request, interval);
+      }
+    </script>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
